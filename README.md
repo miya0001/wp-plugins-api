@@ -5,6 +5,10 @@
 
 This is a WP-CLI command for getting plugin information form WordPress.org Plugin API.
 
+* `wp plugins-api author <author>` - Get a list of plugins for specific author.
+* `wp plugins-api browse <browse>` - Get a list of plugins for popular/new/updated/top-rated.
+* `wp plugins-api info <slug>` - Get a plugin information specific plugin.
+
 ```
 $ wp plugins-api author miyauchi
 +---------------------------------+---------+--------+----------+--------+-------------+
@@ -18,6 +22,7 @@ $ wp plugins-api author miyauchi
 | Child Pages Shortcode           | 1.9.1   | 4.0.1  | 3.4      |  95.6  |      43,401 |
 | WP Total Hacks                  | 1.9.0   | 4.0.1  | 3.5      |  99.4  |     173,521 |
 +---------------------------------+---------+--------+----------+--------+-------------+
+30 plugins. 449,591 downloads.
 ```
 
 ## System Requirements
