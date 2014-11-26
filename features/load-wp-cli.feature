@@ -17,3 +17,8 @@ Feature: Components of the WP-CLI commands
       """
       WP Total Hacks
       """
+    When I run `wp plugins-api browse popular`
+    Then STDOUT should contain:
+      """
+      Contact Form 7
+      """
