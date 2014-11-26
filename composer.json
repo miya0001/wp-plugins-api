@@ -3,11 +3,6 @@
     "description": "WP-CLI command for Plugins API",
     "homepage": "http://github.com/miya0001/wp-cli-plugins-api",
     "license": "GPL-2.0",
-    "type": "wp-cli",
-    "keywords": ["wordpress", "composer", "wp-cli"],
-    "provide": {
-        "wp-cli-plugins-api": "*"
-    },
     "authors": [
         {
             "name": "Takayuki Miyauchi",

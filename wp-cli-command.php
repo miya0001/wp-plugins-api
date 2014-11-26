@@ -4,6 +4,11 @@
 *
 * @author miya0001
 */
+
+if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
+	return;
+}
+
 class Plugins_Api extends WP_CLI_Command {
 
 	private $fields = array(
@@ -21,7 +26,7 @@ class Plugins_Api extends WP_CLI_Command {
 	}
 
 	/**
-	* Plugins stats for specific author.
+	* Get a list of plugins for specific author.
 	*
 	* ## OPTIONS
 	*

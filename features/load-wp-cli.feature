@@ -1,4 +1,4 @@
-Feature: Test that WP-CLI loads.
+Feature: Components of the WP-CLI commands
 
   Scenario: WP-CLI loads for your tests
     Given a WP install
@@ -7,4 +7,13 @@ Feature: Test that WP-CLI loads.
     Then STDOUT should contain:
       """
       Hello world.
+      """
+
+  Scenario: Get a list of plugins for specific author.
+    Given a WP install
+
+    When I run `wp plugins-api author miyauchi`
+    Then STDOUT should contain:
+      """
+      WP Total Hacks
       """
