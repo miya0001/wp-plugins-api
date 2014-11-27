@@ -1,7 +1,6 @@
-# WP-CLI Plugins API
+# wp plugin-api
 
-[![Build Status](https://travis-ci.org/miya0001/wp-cli-plugins-api.svg?branch=master)](https://travis-ci.org/miya0001/wp-cli-plugins-api)
-
+[![Build Status](https://travis-ci.org/miya0001/wp-plugins-api.svg?branch=master)](https://travis-ci.org/miya0001/wp-plugins-api)
 
 This is a WP-CLI command for getting plugin information form WordPress.org Plugin API.
 
@@ -37,3 +36,29 @@ If you need support for wp-cli < 0.15.0, please use the 1.1.x branch.
 See documnentation.
 
 [https://github.com/wp-cli/wp-cli/wiki/Community-Packages](https://github.com/wp-cli/wp-cli/wiki/Community-Packages)
+
+## How to develop
+
+```
+$ git clone git@github.com:miya0001/wp-plugins-api.git
+$ composer install
+```
+
+### Functional tests
+
+Initialize the testing environment locally.
+
+```
+$ WP_CLI_BIN_DIR=/tmp/wp-cli-phar WP_CLI_CONFIG_PATH=/tmp/wp-cli-phar/config.yml bash bin/install-package-tests.sh
+```
+
+Then run the tests.
+
+```
+$ WP_CLI_BIN_DIR=/tmp/wp-cli-phar WP_CLI_CONFIG_PATH=/tmp/wp-cli-phar/config.yml vendor/bin/behat
+```
+
+See also:
+
+* [https://github.com/wp-cli/wp-cli/wiki/Package-Functional-Tests](https://github.com/wp-cli/wp-cli/wiki/Package-Functional-Tests)
+* [http://wp-cli.org/commands/scaffold/package-tests/](http://wp-cli.org/commands/scaffold/package-tests/)

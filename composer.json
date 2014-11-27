@@ -10,7 +10,7 @@
         }
     ],
     "autoload": {
-        "files": [ "wp-cli-command.php" ]
+        "files": [ "inc/cli.php" ]
     },
     "require-dev": {
         "behat/behat": "~2.5"
