@@ -6,13 +6,12 @@
  * @maintainer Takayuki Miyauchi
  */
 
-
-// it need manually load
-require_once( dirname( __FILE__ ) . '/class-plugins-api.php' );
-
 if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
 	return;
 }
+
+// it need manually load
+require_once( dirname( __FILE__ ) . '/inc/class-plugins-api.php' );
 
 class WP_CLI_Plugins_API extends WP_CLI_Command {
 
