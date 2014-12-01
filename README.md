@@ -1,4 +1,4 @@
-# wp plugin-api
+# wp plugin api
 
 [![Build Status](https://travis-ci.org/miya0001/wp-plugins-api.svg?branch=master)](https://travis-ci.org/miya0001/wp-plugins-api)
 
@@ -43,6 +43,12 @@ See documnentation.
 $ git clone git@github.com:miya0001/wp-plugins-api.git
 $ composer install
 ```
+
+### Unit tests
+
+### PHPUnit
+
+[https://github.com/wp-cli/wp-cli/wiki/Plugin-Unit-Tests](https://github.com/wp-cli/wp-cli/wiki/Plugin-Unit-Tests)
 
 ### Functional tests
 
