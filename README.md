@@ -27,11 +27,13 @@ $ wp plugins-api author miyauchi
 ## System Requirements
 
 * PHP >=5.3
-* wp-cli >=0.15.0
-
-If you need support for wp-cli < 0.15.0, please use the 1.1.x branch.
+* wp-cli >=0.17.0
 
 ## Installing
+
+1. [Setting up the package index](https://github.com/wp-cli/wp-cli/wiki/Community-Packages#setting-up-the-package-index)
+1. `php composer.phar require miya0001/wp-plugins-api=dev-master`
+
 
 See documnentation.
 
@@ -43,12 +45,6 @@ See documnentation.
 $ git clone git@github.com:miya0001/wp-plugins-api.git
 $ composer install
 ```
-
-### Unit tests
-
-### PHPUnit
-
-[https://github.com/wp-cli/wp-cli/wiki/Plugin-Unit-Tests](https://github.com/wp-cli/wp-cli/wiki/Plugin-Unit-Tests)
 
 ### Functional tests
 
