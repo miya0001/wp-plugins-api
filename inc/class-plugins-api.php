@@ -62,6 +62,10 @@ class Plugins_API {
             return new WP_Error( 'error', 'The '. $args[0] .'\'s plugins could not be found.' );
         }
 
+        if ( is_wp_error( $result ) ) {
+            return new WP_Error( 'error', $result->get_error_message() );
+        }
+
         $plugins = array();
         $downloads = 0;
 
@@ -100,6 +104,10 @@ class Plugins_API {
                 'rating' => true,
             ),
         ) );
+
+        if ( is_wp_error( $result ) ) {
+            return new WP_Error( 'error', $result->get_error_message() );
+        }
 
         $plugins = array();
 
