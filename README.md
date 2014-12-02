@@ -46,6 +46,13 @@ $ git clone git@github.com:miya0001/wp-plugins-api.git
 $ composer install
 ```
 
+Then create or edit the ~/.wp-cli/config.yml file so that it looks like this:
+
+```
+require:
+- /path/to/wp-plugins-api/cli.php
+```
+
 ### Functional tests
 
 Initialize the testing environment locally.
