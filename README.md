@@ -1,4 +1,4 @@
-# wp plugins-api <sub-command>
+# `wp plugins-api <sub-command>`
 
 [![Build Status](https://travis-ci.org/miya0001/wp-plugins-api.svg?branch=master)](https://travis-ci.org/miya0001/wp-plugins-api)
 
