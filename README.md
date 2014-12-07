@@ -31,6 +31,30 @@ $ wp plugins-api author miyauchi
 
 ## Installing
 
+### Installing without composer.
+
+```
+$ mkdir ~/.wp-cli
+$ touch ~/.wp-cli/config.yml
+$ mkdir ~/.wp-cli/commands
+```
+
+Then install.
+
+```
+$ cd ~/.wp-cli/commands
+$ git clone git@github.com:miya0001/wp-plugins-api.git
+```
+
+Then edit the ~/.wp-cli/config.yml file so that it looks like following.
+
+```
+require:
+- commands/wp-plugins-api/cli.php
+```
+
+### Installing with composer.
+
 1. [Setting up the package index](https://github.com/wp-cli/wp-cli/wiki/Community-Packages#setting-up-the-package-index)
 1. `php composer.phar require miya0001/wp-plugins-api=dev-master`
 
