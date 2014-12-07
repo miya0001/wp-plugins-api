@@ -50,7 +50,7 @@ Then edit the ~/.wp-cli/config.yml file so that it looks like following.
 
 ```
 require:
-- commands/wp-plugins-api/cli.php
+  - commands/wp-plugins-api/cli.php
 ```
 
 ### Installing with composer.
