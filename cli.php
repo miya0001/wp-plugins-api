@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Nginx Cache Controller
+ * WP-CLI wp plugins-api command
  *
  * @subpackage commands/community
  * @maintainer Takayuki Miyauchi
@@ -13,6 +14,9 @@ if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
 // it need manually load
 require_once( dirname( __FILE__ ) . '/inc/class-plugins-api.php' );
 
+/**
+ * Getting plugin information from WordPress.org Plugins API.
+ */
 class WP_CLI_Plugins_API extends WP_CLI_Command {
 
 	private $fields = array(
