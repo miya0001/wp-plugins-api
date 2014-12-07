@@ -25,10 +25,10 @@ Feature: Components of the WP-CLI commands
       Error: The xxxxxxxxxxxxxxx's plugins could not be found.
       """
 
-    When I run `wp plugins-api browse popular`
+    When I run `wp plugins-api browse top-rated`
     Then STDOUT should contain:
       """
-      akismet
+      Google XML Sitemaps
       """
 
     When I try `wp plugins-api browse hoge`
