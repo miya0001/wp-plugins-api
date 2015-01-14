@@ -40,25 +40,36 @@ class WP_CLI_Plugins_API extends WP_CLI_Command {
 	 * <author>
 	 * : A plugin author's name of wordpress.org
 	 *
+	 * [--format=<format>]
+	 * : Accepted values: table, csv, json, count, ids. Default: table
+	 *
 	 * ## EXAMPLES
 	 *
 	 *    wp plugins-api author miyauchi
 	 *
 	 * @subcommand author
 	 */
-	public function author( $args )
+	public function author( $args, $assoc_args )
 	{
-		$result = Plugins_API::author( $args );
+		if ( isset( $assoc_args['format'] ) ) {
+			$format = $assoc_args['format'];
+		} else {
+			$format = 'table';
+		}
+
+		$result = Plugins_API::author( $args, $format );
 
 		if ( is_wp_error( $result ) ) {
 			WP_CLI::error( $result->get_error_message() );
 		} else {
-			WP_CLI\Utils\format_items( 'table', $result['plugins'], $this->fields );
-			WP_CLI::line( sprintf(
-				'%s plugins. %s downloads.',
-				$result['number'],
-				number_format( $result['downloads'] )
-			) );
+			WP_CLI\Utils\format_items( $format, $result['plugins'], $this->fields );
+			if ( 'table' === $format ) {
+				WP_CLI::line( sprintf(
+					'%s plugins. %s downloads.',
+					$result['number'],
+					number_format( $result['downloads'] )
+				) );
+			}
 		}
 	}
 
@@ -77,14 +88,14 @@ class WP_CLI_Plugins_API extends WP_CLI_Command {
 	 *
 	 * @subcommand browse
 	 */
-	public function browse( $args )
+	public function browse( $args, $assoc_args )
 	{
-		$result = Plugins_API::browse( $args );
+		$result = Plugins_API::browse( $args, $format );
 
 		if ( is_wp_error( $result ) ) {
 			WP_CLI::error( $result->get_error_message() );
 		} else {
-			WP_CLI\Utils\format_items( 'table', $result, $this->fields );
+			WP_CLI\Utils\format_items( $format, $result, $this->fields );
 		}
 	}
 
@@ -103,14 +114,14 @@ class WP_CLI_Plugins_API extends WP_CLI_Command {
 	 *
 	 * @subcommand info
 	 */
-	public function info( $args )
+	public function info( $args, $assoc_args )
 	{
-		$result = Plugins_API::info( $args );
+		$result = Plugins_API::info( $args, $format );
 
 		if ( is_wp_error( $result ) ) {
 			WP_CLI::error( $result->get_error_message() );
 		} else {
-			WP_CLI\Utils\format_items( 'table', $result, array( 'Field', 'Value' ) );
+			WP_CLI\Utils\format_items( $format, $result, array( 'Field', 'Value' ) );
 		}
 	}
 }
