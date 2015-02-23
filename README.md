@@ -4,9 +4,9 @@
 
 This is a WP-CLI command for getting plugin information form WordPress.org Plugin API.
 
-* `wp plugins-api author <author>` - Get a list of plugins for specific author.
+* `wp plugins-api author <author>` - Get a list of plugins for a specific author.
 * `wp plugins-api browse <browse>` - Get a list of plugins for popular/new/updated/top-rated.
-* `wp plugins-api info <slug>` - Get a plugin information specific plugin.
+* `wp plugins-api info <slug>` - Get a plugin information for a specific plugin.
 
 ```
 $ wp plugins-api author miyauchi
