@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/miya0001/wp-plugins-api.svg?branch=master)](https://travis-ci.org/miya0001/wp-plugins-api)
 
-This is a WP-CLI command for getting plugin information form WordPress.org Plugin API.
+This is a WP-CLI command for getting plugin information from WordPress.org Plugin API.
 
 * `wp plugins-api author <author>` - Get a list of plugins for a specific author.
 * `wp plugins-api browse <browse>` - Get a list of plugins for popular/new/updated/top-rated.
